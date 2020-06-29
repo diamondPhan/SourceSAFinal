@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="finalprojectsa.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="finalprojectsa_gearhost_ProductService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://finalprojectsa.gear.host/ProductService.asmx</Value>
+    </Setting>
+    <Setting Name="finalprojectsa_accountgearhost_accountService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://accountservice.gear.host/AccountService.asmx</Value>
+    </Setting>
+    <Setting Name="finalprojectsa_usergearhost_UserService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://finalprojectsa.gear.host/UserService.asmx</Value>
+    </Setting>
+    <Setting Name="finalprojectsa_categearhost_CategoryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://finalprojectsa.gear.host/CategoryService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

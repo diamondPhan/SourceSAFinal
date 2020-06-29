@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MyDB">
+  <DataContextMoniker Name="/MyDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5f79d82b-3fc5-4f9f-b95d-2f8a89d7619b" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MyDBDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c641f848-6bf2-40a1-b57b-1c4148cf3940" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a72e4de-57f4-4af1-9359-140f97acf554" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/MyDBDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67ac2b23-ba67-4460-a373-6db1e2b0ed2b" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe0bbef7-b1d5-4782-a116-c7f39824f8dd" absoluteBounds="0.75, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyDBDataContext/ChiTietHoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcaa1050-eda6-4f34-ab69-86ffd2185c38" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="356a9818-3782-4020-a598-1e4e99b85609" absoluteBounds="3.75, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyDBDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7220f1b9-41cc-4fd4-88d7-7e30d6bfbac4" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33ad8829-ce57-4fbd-90b8-3eb4491256ab" absoluteBounds="6.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MyDBDataContext/HoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4cd6b926-e852-4877-865e-bea3ca095bac" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,150 @@
+﻿@*@model List<Sa_finalproject.Models.Cart>*@
+
+@model List<Sa_finalproject.Models.Cart>
+
+<div id="content">
+    @if (Model == null || Model.Count == 0)
+    {
+        <span style="text-align:right">Giỏ hàng của bạn đang rỗng</span>
+    }
+    else
+    {
+        <table width="700px" cellspacing="0" cellpadding="5" id="tblProduct">
+            <tr bgcolor="#CCCCCC">
+                <th width="20" align="left">ID </th>
+                <th width="220" align="left">Image </th>
+                <th width="180" align="left">Description </th>
+                <th width="100" align="center" class="SoLuong">Quantity </th>
+                <th width="60" align="right">Price </th>
+                <th width="60" align="right" class="ThanhTien">Total </th>
+                <th width="90"> </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="SanPhamID">@item.SanPhamID</td>
+                    <td><img width="200px" height="150px" src ="@item.Hinh" alt="image 01" /></td>
+                    <td>@item.TenSanPham</td>
+                    @*<td align="center"><input type="number" id="SoLuong1" value="@item.SoLuong" style="width: 20px; text-align: right" /> </td>*@
+                    <td align="right">@item.DonGia </td>`
+                    <td align="right" class="ThanhTien">@item.ThanhTien</td>
+                    <td align="center"> <a href="@Url.Action("Deleted",new { SPID = item.SanPhamID})"><img src="~/images/remove_x.gif" alt="remove" /><br />Remove</a> </td>
+                    @*<td align="center"> <a href="@Url.Action("Updated", new { SPID = item.SanPhamID}, new { Soluongmoi = item.SoLuong })"><br />Update</a> </td>*@
+                    @*<td class="qty">
+                            <input type="text" class="tiny-size"  value="@item.SoLuong" id="SoLuong" onkeypress="updateCart(@item.SanPhamID, this.value)" />
+                            <a href="" class="btn btn-primary higher bold" id="upQuantity">Cập nhật</a>
+                        </td>*@
+                    <td>
+                        <form action="@Url.Action("Updated","Cart",new { SPID = item.SanPhamID})" method="get">
+                            <input type="hidden" name="SPID" id="SPID" value="@item.SanPhamID" />
+                            <input type="number" min="1" step="1" name="Soluongmoi" id="Soluongmoi" data-id="@item.SanPhamID" style="height: 20px; width:50px" value="@item.SoLuong" />
+                            <button type="submit" class="btn btn-primary btn-sm"> Cập nhật </button>
+                        </form>
+                    </td>
+                    @*<td>
+                            <form id="upQuantity" method="get">
+                                <input type="hidden" name="SPID" id="SPID" value="@item.SanPhamID" />
+                                <input type="number" min="1" step="1" name="Soluongmoi" id="Soluongmoi" data-id="@item.SanPhamID" style="height: 20px; width:50px" value="@item.SoLuong" />
+                                <button type="submit" class="btn btn-primary btn-sm" id="upQuantity" onclick="hi();"> Cập nhật </button>
+                            </form>
+                        </td>*@
+
+                </tr>
+            }
+            <tr>
+                <td colspan="3" align="right" height="40px">Have you modified your basket? Please click here to <a class="Update" href="javascript:;"><strong>Update</strong></a>&nbsp;&nbsp;</td>
+                <td align="right" style="background:#ccc; font-weight:bold"> Total </td>
+                <td align="right" style="background:#ccc; font-weight:bold">@Model.Sum(m => m.ThanhTien) </td>
+                <td style="background:#ccc; font-weight:bold"> </td>
+
+            </tr>
+        </table>
+        <div style="float:right; width: 215px; margin-top: 20px;">
+
+            <div class="checkout"><a href="@Url.Action("CheckOut","Cart")" class="more">Proceed to Checkout</a></div>
+            <div class="cleaner h20"></div>
+            <div class="continueshopping"><a href="javascript:history.back()" class="more">Continue Shopping</a></div>
+
+        </div>
+
+
+    }
+</div>
+<div class="cleaner"></div>
+<script type="text/javascript">
+    //function AppendRow(row, SoLuong, SanPhamID) {
+    //    Bind CustomerId.
+    //    $(".SanPhamID", row).find("td").html(SanPhamID);
+
+    //    Bind Soluong.
+    //    $(".SoLuong", row).find("td").html(SoLuong);
+    //    $(".SoLuong", row).find("input").val(SoLuong);
+
+    //    Bind ThanhTien.
+    //    $(".ThanhTien", row).find("td").html(ThanhTien);
+    //    $(".ThanhTien", row).find("input").val(ThanhTien);
+
+    //    row.find(".Edit").show();
+    //    row.find(".Delete").show();
+    //    $("#tblCustomers").append(row);
+    //};
+    //Update event handler.
+    //$("body").on("click", "#tblProduct .Update", function () {
+    //    var row = $(this).closest("tr");
+    //    $("td", row).each(function () {
+    //        if ($(this).find("input").length > 0) {
+    //            var span = $(this).find("td");
+    //            var input = $(this).find("input");
+    //            span.html(input.val());
+    //            span.show();
+    //            input.hide();
+    //        }
+    //    });
+    //    row.find(".Edit").show();
+    //    row.find(".Delete").show();
+    //    row.find(".Cancel").hide();
+    //    $(this).hide();
+
+    //    var sanpham = {};
+    //    sanpham.SanPhamID = row.find(".SanPhamID").find("span").html();
+    //    sanpham.SoLuong = row.find(".SoLuong").find("input").html();
+    //    var SPID = $("input[name='SoLuong']").val();
+    //    $.ajax({
+    //        type: "POST",
+    //        url: "/Cart/Updated",
+    //        data: '{sanpham:' + JSON.stringify(sanpham) + '}',
+    //        contentType: "application/json; charset=utf-8",
+
+   // //    });
+   //$("body").on("click", "#tblProduct .Update",function () {
+   //     var SPID = $("td [class='SanPhamID']").val();
+   //    var Soluongmoi = $("input[name='SoLuong']").val();
+   //    alert(SPID) ;
+   //     $.ajax({
+   //         type: "POST",
+   //         url: "/Cart/Updated",
+   //         data: 'SPID=' + SPID, 'Soluongmoi=': + Soluongmoi,
+   //         contentType: "application/json; charset=utf-8",
+
+   //     });
+       $(function hi() {
+           $('#upQuantity').click(function (SPID,Soluongmoi) {
+                Soluongmoi = document.getElementById("SoLuongmoi").value;
+               SPID = document.getElementById("SPID").value;
+               console.log(Soluongmoi);
+               //alert(Soluongmoi);
+               $.ajax({
+                   url: "localhost:44391/Cart/Updated?SPID=" + SPID+"&Soluongmoi="+Soluongmoi,
+                   type: 'GET',
+            success: function () {
+
+                $("#content").load('@Url.Action("Index","Cart")');
+
+            }
+        });
+    });
+
+
+</script>

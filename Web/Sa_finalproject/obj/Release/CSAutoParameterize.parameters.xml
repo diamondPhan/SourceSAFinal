@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Model1-Web.config Connection String" description="Model1 Connection String used in web.config by the application to access the database." defaultValue="data source=den1.mssql8.gear.host;initial catalog=ptwdatabase;persist security info=True;user id=ptwdatabase;password=By3o3-16~G1j;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\source\\repos\\Sa_FinalProject\\Sa_finalproject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model1']/@connectionString" />
+  </parameter>
+  <parameter name="Model11-Web.config Connection String" description="Model11 Connection String used in web.config by the application to access the database." defaultValue="data source=den1.mssql8.gear.host;initial catalog=finalprojectsa;persist security info=True;user id=finalprojectsa;password=Yr4aA7-?N36D;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\source\\repos\\Sa_FinalProject\\Sa_finalproject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model11']/@connectionString" />
+  </parameter>
+</parameters>

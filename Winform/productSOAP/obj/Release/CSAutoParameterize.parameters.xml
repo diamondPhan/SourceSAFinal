@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="strCon-Web.config Connection String" description="strCon Connection String used in web.config by the application to access the database." defaultValue="Data Source=den1.mssql8.gear.host;Initial Catalog=finalprojectsa;Persist Security Info=True;User ID=finalprojectsa;Password=Yr4aA7-?N36D" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\source\\repos\\finalprojectsa\\productSOAP\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='strCon']/@connectionString" />
+  </parameter>
+  <parameter name="finalprojectsaConnectionString-Web.config Connection String" description="finalprojectsaConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=den1.mssql8.gear.host;Initial Catalog=finalprojectsa;Persist Security Info=True;User ID=finalprojectsa" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Admin\\source\\repos\\finalprojectsa\\productSOAP\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='finalprojectsaConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

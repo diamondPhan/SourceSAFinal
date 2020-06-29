@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\bin\Debug\finalprojectsa.exe.config
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\bin\Debug\finalprojectsa.exe
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\bin\Debug\finalprojectsa.pdb
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.Form1.resources
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.Properties.Resources.resources
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.QuanLyDanhMuc.resources
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.QuanLySanPham.resources
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.exe
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.pdb
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.Login.resources
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.Register.resources
+C:\Users\Admin\source\repos\finalprojectsa\finalprojectsa\obj\Debug\finalprojectsa.QuanlyUser.resources

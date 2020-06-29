@@ -1,0 +1,59 @@
+﻿@model List<Sa_finalproject.Models.ChiTietHoaDon>
+
+
+<table width="700px" cellspacing="0" cellpadding="5" id="tblProduct">
+    <tr bgcolor="#CCCCCC">
+        <th width="20" align="left">ID </th>
+        <th width="180" align="left">Name </th>
+        <th width="100" align="center" class="SoLuong">Quantity </th>
+        <th width="60" align="right">Price </th>
+        <th width="60" align="right">Total </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td id="SanPhamID">@item.ID_SanPham</td>
+            <td>@item.Name_CT</td>
+            <td>@item.SoLuongMua</td>
+            <td>@item.Giaban</td>
+            <td align="right">@item.TongTien </td>`
+
+        </tr>
+    }
+    <tr>
+        <td align="right" style="background:#ccc; font-weight:bold"><h4>TOTAL:<strong>$@Model.Sum(m => m.TongTien)</strong></h4> </td>
+        <td style="background:#ccc; font-weight:bold"> </td>
+    </tr>
+
+</table>
+@*<table width="700px" cellspacing="0" cellpadding="5" id="tblProduct">
+        <tr bgcolor="#CCCCCC">
+            <th width="20" align="left">ID </th>
+            <th width="90" align="left">Image </th>
+            <th width="180" align="left">Name </th>
+            <th width="100" align="center" class="SoLuong">Quantity </th>
+            <th width="60" align="right">Price </th>
+            <th width="60" align="right" class="ThanhTien">Total </th>
+            <th width="90"> </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td id="SanPhamID">@item.SanPhamID</td>
+                <td><img src="@item.Hinh" alt="image 01" /></td>
+                <td>@item.TenSanPham</td>
+                <td>@item.SoLuong</td>
+                <td align="right">@item.DonGia </td>`
+                <td align="right" class="ThanhTien">@item.ThanhTien</td>
+            </tr>
+        }
+        <tr>
+            <td align="right" style="background:#ccc; font-weight:bold"><h4>TOTAL:<strong>$@Model.Sum(m => m.ThanhTien)</strong></h4> </td>
+            <td style="background:#ccc; font-weight:bold"> </td>
+        </tr>
+
+    </table>*@
+

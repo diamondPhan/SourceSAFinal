@@ -1,0 +1,29 @@
+﻿
+@model List<Sa_finalproject.Models.Product>
+@{
+    ViewBag.Title = "Home Page";
+}
+@for (int i = 1; i <= Model.Count(); i++)
+{
+    if (i % 3 == 0)
+    {
+        <div class="col col_14 product_gallery">
+            <a href='@Url.Action("ProductDetail","Product",new { proid = Model[i - 1].ProductID })'><img width="200" height="150" src="@Model[i-1].Imange" alt="Product 01" /></a>
+            <h3>@Model[i - 1].ProductName</h3>
+            <p class="product_price">$@Model[i - 1].Price</p>
+            <a href="shoppingcart.html" class="add_to_cart">Add to Cart</a>
+        </div>
+    }
+    else
+    {
+        <div class="col col_14 product_gallery no_margin_right">
+            <a href='@Url.Action("ProductDetail","Product",new { proid = Model[i - 1].ProductID })'><img width="200" height="150" src="@Model[i-1].Imange" alt="Product 03" /></a>
+            <h3>@Model[i - 1].ProductName</h3>
+            <p class="product_price">$@Model[i - 1].Price</p>
+            <a href="@Url.Action("AddtoCart", "Cart", new { SPID = Model[i-1].ProductID })" class="add_to_cart">Add to Cart</a>
+        </div>
+    }
+}
+
+
+

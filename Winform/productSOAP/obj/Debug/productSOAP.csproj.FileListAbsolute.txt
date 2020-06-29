@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\finalprojectsa\productSOAP\obj\Debug\productSOAP.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\finalprojectsa\productSOAP\obj\Debug\productSOAP.csproj.CoreCompileInputs.cache

@@ -1,0 +1,96 @@
+﻿@model List<Sa_finalproject.Models.Cart>
+
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+@* <div id="content">*@
+<h2>Checkout</h2>
+<h5><strong>BILLING DETAILS</strong></h5>
+<div class="col col_13 checkout">
+    @using (Html.BeginForm("ProcessOrder", "Cart", FormMethod.Post, new { id = "customer-form" }))
+    {
+        <label>Enter your full name as it is on the credit card:</label>
+        <input type="text" name="cusName" style="width:300px;" />
+        <label>Address:</label>
+        <input type="text" name="cusDiaChi" style="width:300px;" />
+        <label>City:</label>
+        <input type="text" name="cusThanhPho" style="width:300px;" />
+        <label>Country:</label>
+        <input type="text" name="cusDatNuoc" style="width:300px;" />
+        <label>E - MAIL</label>
+        <input type="text" name="cusEmail" style="width:300px;" />
+        <label>PHONE </label>
+        <span style="font-size:10px"> Please, specify your reachable phone number.YOU MAY BE GIVEN A CALL TO VERIFY AND COMPLETE THE ORDER.</span>
+        <input type="text" name="cusPhone" style="width:300px;" />
+        <input type="submit" value="Continue to payment" />
+    }
+</div>
+
+<div class="col col_13 checkout">
+
+</div>
+
+<div class="cleaner h50"></div>
+<h3>Shopping Cart</h3>
+@if (Model == null || Model.Count == 0)
+{
+    <span style="margin-left:100px; color: red; margin-top: 500px;"><h5>Giỏ hàng của bạn đang rỗng !</h5></span>
+}
+else
+{
+    <table width="700px" cellspacing="0" cellpadding="5" id="tblProduct">
+        <tr bgcolor="#CCCCCC">
+            <th width="20" align="left">ID </th>
+            <th width="90" align="left">Image </th>
+            <th width="180" align="left">Name </th>
+            <th width="100" align="center" class="SoLuong">Quantity </th>
+            <th width="60" align="right">Price </th>
+            <th width="60" align="right" class="ThanhTien">Total </th>
+            <th width="90"> </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td id="SanPhamID">@item.SanPhamID</td>
+                <td><img src="@item.Hinh" alt="image 01" /></td>
+                <td>@item.TenSanPham</td>
+                <td>@item.SoLuong</td>
+                <td align="right">@item.DonGia </td>`
+                <td align="right" class="ThanhTien">@item.ThanhTien</td>
+            </tr>
+        }
+        <tr>
+            <td align="right" style="background:#ccc; font-weight:bold"><h4>TOTAL:<strong>$@Model.Sum(m => m.ThanhTien)</strong></h4> </td>
+            <td style="background:#ccc; font-weight:bold"> </td>
+        </tr>
+
+    </table>
+}
+@*@Html.Action("hoaDon_Part","Cart")*@
+
+<p><input type="checkbox" />I have accepted the <a href="#">Terms of Use</a>.</p>
+<table style="border:1px solid #CCCCCC;" width="100%">
+    <tr>
+        <td height="80px"> <img src="~/images/paypal.gif" alt="paypal" /></td>
+        <td width="400px;" style="padding: 0px 20px;">
+            Recommended if you have a PayPal account. Fastest delivery time.
+        </td>
+        <td><a href="#" class="more">PAYPAL</a></td>
+    </tr>
+    <tr>
+        <td height="80px">
+            <img src="~/images/2co.gif" alt="paypal" />
+        </td>
+        <td width="400px;" style="padding: 0px 20px;">
+            2Checkout.com, Inc. is an authorized retailer of goods and services provided by Template-Guide.com. 2CheckOut accepts customer orders via online checks, Visa, MasterCard, Discover, American Express, Diners, JCB and debit cards with the Visa, Mastercard logo.
+        </td>
+        <td><a href="#" class="more">2CHECKOUT</a></td>
+    </tr>
+</table>
+@*<button ><a href="@Url.Action("SuccessOrder","Cart",new { hdid= })"></a> Next</button>*@
+@*</div>*@
+
+
